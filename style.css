@@ -1,14 +1,17 @@
+body{
+    background-color: #1d3361;
+}
 #app{
     padding-top: 100px;
 }
-.container{
-    background-color: wheat;
-    height: 500px;
-}
-.col{
-    background-color: red;
-}
+
+
 .top-wrapper{
-    min-height: 300px;
-    background-color: rgb(119, 119, 119);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.342);
+
+}
+.bottom-wrapper{
+    background-color: #00000085;
+    border: 1px solid white;
 }

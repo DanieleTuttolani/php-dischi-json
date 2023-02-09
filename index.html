@@ -13,16 +13,16 @@
 <body>
     <div id="app">
         <div class="container"> 
-            <div class="row row-cols-4 h-100">
-                <div class="col p-0">
+            <div class="row row-cols-4 h-100 g-4">
+                <div v-for="disc in discs" :key="disc.title" class="col p-0">
                     <div class="top-wrapper">
-                        <!-- img qui -->
+                        <img :src="disc.poster" :alt="disc.title" class="img-fluid">
                     </div>
                     <div class="bottom-wrapper text-center text-light">
-                        <p><strong>titolo</strong></p>
-                        <p><strong>autore</strong></p>
-                        <p><strong>year</strong></p>
-                        <p><strong>genere</strong></p>
+                        <p>Titolo: <strong> {{ disc.title }}</strong></p>
+                        <p>Autore: <strong> {{ disc.author }}</strong></p>
+                        <p>Anno: <strong> {{disc.year}}</strong></p>
+                        <p>Genere: <strong> {{disc.genre}}</strong></p>
                     </div>
                 </div>
                 
@@ -34,8 +34,8 @@
     <!--vue js-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!--axios-->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js' integrity='sha512-L4lHq2JI/GoKsERT8KYa72iCwfSrKYWEyaBxzJeeITM9Lub5vlTj8tufqYk056exhjo2QDEipJrg6zen/DDtoQ==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.2/axios.min.js' integrity='sha512-NCiXRSV460cHD9ClGDrTbTaw0muWUBf/zB/yLzJavRsPNUl9ODkUVmUHsZtKu17XknhsGlmyVoJxLg/ZQQEeGA==' crossorigin='anonymous'></script>
     <!-- il mio js-->
-    <script src="script/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
