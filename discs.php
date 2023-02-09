@@ -1,6 +1,6 @@
 <?php
 
-$discs = [
+$library = [
     [
         'title' => 'New Jersey',
         'author' => 'Bon Jovi',
@@ -72,3 +72,8 @@ $discs = [
         'genre' => 'Pop'
     ],
 ];
+
+$discs = json_encode($library);
+
+header('Content-Type: application/json');
+echo $discs;
